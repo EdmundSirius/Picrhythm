@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1857C585238D579C00AABDFF /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857C584238D579C00AABDFF /* PinterestLayout.swift */; };
+		1857C587238D671A00AABDFF /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857C586238D671A00AABDFF /* PhotoStreamViewController.swift */; };
 		1865921C238D433200E67E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865921B238D433200E67E8F /* AppDelegate.swift */; };
 		1865921E238D433200E67E8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865921D238D433200E67E8F /* SceneDelegate.swift */; };
 		18659220238D433200E67E8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865921F238D433200E67E8F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1857C584238D579C00AABDFF /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		1857C586238D671A00AABDFF /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
 		18659218238D433200E67E8F /* Picrhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picrhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1865921B238D433200E67E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1865921D238D433200E67E8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1857C583238D576800AABDFF /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				1857C584238D579C00AABDFF /* PinterestLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		1865920F238D433200E67E8F = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 		1865921A238D433200E67E8F /* Picrhythm */ = {
 			isa = PBXGroup;
 			children = (
+				1857C583238D576800AABDFF /* Layouts */,
 				1865921B238D433200E67E8F /* AppDelegate.swift */,
 				1865921D238D433200E67E8F /* SceneDelegate.swift */,
 				1865921F238D433200E67E8F /* ViewController.swift */,
@@ -63,6 +76,7 @@
 				18659224238D433700E67E8F /* Assets.xcassets */,
 				18659226238D433700E67E8F /* LaunchScreen.storyboard */,
 				18659229238D433700E67E8F /* Info.plist */,
+				1857C586238D671A00AABDFF /* PhotoStreamViewController.swift */,
 			);
 			path = Picrhythm;
 			sourceTree = "<group>";
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1857C585238D579C00AABDFF /* PinterestLayout.swift in Sources */,
 				18659220238D433200E67E8F /* ViewController.swift in Sources */,
+				1857C587238D671A00AABDFF /* PhotoStreamViewController.swift in Sources */,
 				1865921C238D433200E67E8F /* AppDelegate.swift in Sources */,
 				1865921E238D433200E67E8F /* SceneDelegate.swift in Sources */,
 			);
