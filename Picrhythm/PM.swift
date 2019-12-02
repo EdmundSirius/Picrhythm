@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct PM {
+class PM {
     var image:UIImage
     var tag:String
     
@@ -17,6 +17,10 @@ struct PM {
         self.tag = tag
     }
     
+    static func addNewPhoto(img: UIImage){
+        
+    }
+
     static func getAllPhotos() -> [PM] {
         var photos:[PM] = []
         guard let url = Bundle.main.url(forResource: "Photos", withExtension: "plist"),

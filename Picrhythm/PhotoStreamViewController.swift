@@ -24,6 +24,7 @@ class PhotoStreamViewController:UICollectionViewController{
         collectionView?.backgroundColor = .white
         collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
     }
+
 }
 
 extension PhotoStreamViewController:UICollectionViewDelegateFlowLayout{
@@ -44,5 +45,28 @@ extension PhotoStreamViewController:UICollectionViewDelegateFlowLayout{
 extension PhotoStreamViewController: PinterestLayoutDelegate{
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
         return photos[indexPath.item].image.size.height
+    }
+}
+
+extension PhotoStreamViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    @IBAction func getFromAlbum(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = .photoLibrary
+            picker.allowsEditing = false
+            self.present(picker, animated: true, completion: {() -> Void in })
+        }
+        else{
+            print("No Albeum")
+        }
+    }
+    @IBAction func getFromCamera(_ sender: UIButton) {
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let img = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        picker.dismiss(animated: true, completion: {() -> Void in})
     }
 }
