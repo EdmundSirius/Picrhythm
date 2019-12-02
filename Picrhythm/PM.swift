@@ -19,14 +19,14 @@ struct PM {
     
     static func getAllPhotos() -> [PM] {
         var photos:[PM] = []
-        let manager = FileManager.default
-        let url = manager.currentDirectoryPath + "/Photos"
-        guard let urls = try?manager.contentsOfDirectory(atPath: url)
+        guard let url = Bundle.main.url(forResource: "Photos", withExtension: "plist"),
+            let imagesInPlist = NSArray(contentsOf: url) as? [String]
             else{
+                print("empty")
                 return photos
         }
-        for item in urls{
-            if let img = UIImage(contentsOfFile: item){
+        for element in imagesInPlist{
+            if let img = UIImage(named: element){
                 if let pm = PM(image: img, tag: "default"){
                     photos.append(pm)
                 }

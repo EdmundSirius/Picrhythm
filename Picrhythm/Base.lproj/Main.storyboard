@@ -43,42 +43,54 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewLayout key="collectionViewLayout" id="IlB-Sx-IkP" customClass="PinterestLayout" customModule="Picrhythm" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BUa-Vc-lsx" customClass="PhotoCell" customModule="Picrhythm" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="BUa-Vc-lsx" customClass="PhotoCell" customModule="Picrhythm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="otu-6T-B4f">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="otu-6T-B4f">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ft-aT-ko6">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ft-aT-ko6">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKp-qV-Gdj" userLabel="Tag">
-                                            <rect key="frame" x="79" y="150" width="42" height="50"/>
+                                            <rect key="frame" x="0.0" y="170" width="200" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="BM3-Ry-PvG"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="NKp-qV-Gdj" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" constant="79" id="0Kr-jH-fCZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="6Ft-aT-ko6" secondAttribute="trailing" id="ADq-Ia-Tjk"/>
-                                        <constraint firstAttribute="bottom" secondItem="NKp-qV-Gdj" secondAttribute="bottom" id="IFB-k8-yOa"/>
-                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" id="YVS-NX-Ve8"/>
-                                        <constraint firstItem="NKp-qV-Gdj" firstAttribute="top" secondItem="otu-6T-B4f" secondAttribute="top" constant="150" id="etq-mY-Ot0"/>
-                                        <constraint firstAttribute="trailing" secondItem="NKp-qV-Gdj" secondAttribute="trailing" constant="79" id="iGc-hz-va3"/>
-                                        <constraint firstAttribute="bottom" secondItem="6Ft-aT-ko6" secondAttribute="bottom" id="msW-HF-cfx"/>
-                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="top" secondItem="otu-6T-B4f" secondAttribute="top" id="ubO-nM-4zG"/>
+                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="top" secondItem="otu-6T-B4f" secondAttribute="top" id="GB5-nH-jSU"/>
+                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" id="Ifr-GA-qba"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Ft-aT-ko6" secondAttribute="trailing" id="YPe-Wv-1KN"/>
+                                        <constraint firstItem="NKp-qV-Gdj" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" id="bJ1-Sa-1LJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Ft-aT-ko6" secondAttribute="bottom" id="cwu-3i-igb"/>
+                                        <constraint firstAttribute="trailing" secondItem="NKp-qV-Gdj" secondAttribute="trailing" id="vOk-lC-yRQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="NKp-qV-Gdj" secondAttribute="bottom" id="wGU-Pq-34K"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="otu-6T-B4f" secondAttribute="trailing" constant="-8" id="cQH-Rj-W0H"/>
+                                    <constraint firstItem="otu-6T-B4f" firstAttribute="top" secondItem="BUa-Vc-lsx" secondAttribute="topMargin" constant="-8" id="gyX-nZ-eNf"/>
+                                    <constraint firstItem="otu-6T-B4f" firstAttribute="leading" secondItem="BUa-Vc-lsx" secondAttribute="leadingMargin" constant="-8" id="phT-mN-elT"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="otu-6T-B4f" secondAttribute="bottom" constant="-8" id="tGm-bF-99f"/>
+                                </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
-                                    <outlet property="contentView" destination="otu-6T-B4f" id="Epy-mx-8S3"/>
-                                    <outlet property="imageView" destination="6Ft-aT-ko6" id="J5h-MR-Xdj"/>
-                                    <outlet property="tag" destination="NKp-qV-Gdj" id="GdW-lL-XYa"/>
+                                    <outlet property="containerView" destination="otu-6T-B4f" id="7cq-LR-eAe"/>
+                                    <outlet property="imageView" destination="6Ft-aT-ko6" id="f8H-sI-HHG"/>
+                                    <outlet property="tagLabel" destination="NKp-qV-Gdj" id="W8r-dA-TJH"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tt0-0U-mE3" id="W4g-6k-ouQ"/>
+                            <outlet property="delegate" destination="tt0-0U-mE3" id="ZR0-1C-puB"/>
+                        </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Photos" id="X95-mM-VzM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
