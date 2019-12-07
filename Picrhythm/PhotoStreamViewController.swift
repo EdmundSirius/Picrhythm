@@ -24,7 +24,6 @@ class PhotoStreamViewController:UICollectionViewController{
         collectionView?.backgroundColor = .white
         collectionView?.contentInset = UIEdgeInsets(top: 23, left: 16, bottom: 10, right: 16)
     }
-
 }
 
 extension PhotoStreamViewController:UICollectionViewDelegateFlowLayout{
@@ -65,7 +64,32 @@ extension PhotoStreamViewController: UIImagePickerControllerDelegate,UINavigatio
         
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let img = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        /*if let url = info[UIImagePickerController.InfoKey.mediaURL]{
+            if let path:String = url as? String{
+                PM.addNewPhoto(path: path)
+            }
+            else{
+                print("error 1")
+            }
+        }
+        else{
+            print("error 2")
+        }*/
+        if let imgURL = info[UIImagePickerController.InfoKey.imageURL]{
+            PM.addNewPhoto(imgURL: imgURL as! URL)
+            photos = PM.getAllPhotos()
+        }
+        else{
+            print("failure")
+        }
+        /*if let img = info[UIImagePickerController.InfoKey.originalImage]{
+            //let newPhoto = PM(image: img as! UIImage, tag: "default")
+            //photos.append(newPhoto)
+            PM.getAllPhotos()
+        }
+        else{
+            print("failure2")
+        }*/
         
         picker.dismiss(animated: true, completion: {() -> Void in})
     }

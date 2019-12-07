@@ -63,7 +63,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" red="0.99742268041237114" green="0.99484536082474229" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         </view>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="BUa-Vc-lsx" customClass="PhotoCell" customModule="Picrhythm" customModuleProvider="target">
@@ -93,11 +93,6 @@
                                         <constraint firstAttribute="bottom" secondItem="NKp-qV-Gdj" secondAttribute="bottom" id="wGU-Pq-34K"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="otu-6T-B4f" firstAttribute="leading" secondItem="BUa-Vc-lsx" secondAttribute="leadingMargin" constant="-8" id="O4P-Bs-mCb"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="otu-6T-B4f" secondAttribute="bottom" constant="-8" id="PKJ-TN-o9s"/>
-                                    <constraint firstItem="otu-6T-B4f" firstAttribute="top" secondItem="BUa-Vc-lsx" secondAttribute="topMargin" constant="-8" id="xD1-ad-aU7"/>
-                                </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="containerView" destination="otu-6T-B4f" id="7cq-LR-eAe"/>
