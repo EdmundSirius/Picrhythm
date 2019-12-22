@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Lw-Hc-sBC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fPO-i3-E5Q">
+            <objects>
+                <navigationController id="QpS-uN-AZn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dMI-Gu-N1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GEh-zQ-DEY" kind="relationship" relationship="rootViewController" id="wKx-xe-Pdx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaB-Mi-lf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="316"/>
+        </scene>
+        <!--播放器-->
+        <scene sceneID="spE-7V-ac7">
+            <objects>
+                <viewController id="GEh-zQ-DEY" customClass="PlayerViewController" customModule="Picrhythm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8v-G7-bfW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-wQ-F26">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5I3-VC-SzV">
+                                <rect key="frame" x="35" y="465" width="345" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="song name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-dh-7oC">
+                                        <rect key="frame" x="27" y="8" width="308" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="song info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mit-a7-ZEA">
+                                        <rect key="frame" x="27" y="93" width="308" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot6-w7-0gl">
+                                        <rect key="frame" x="15" y="182" width="22" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.left.to.line.alt" catalog="system"/>
+                                        <connections>
+                                            <action selector="toStartBtnTouched:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="twD-2S-zOk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJm-g8-THB">
+                                <rect key="frame" x="52" y="749" width="310" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xM-AA-Iaj">
+                                <rect key="frame" x="106" y="760" width="203" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="点此开始下载第一首歌" image="square.and.arrow.down" catalog="system">
+                                    <color key="titleColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="download:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="FV5-br-ttF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fS-No-cQH">
+                                <rect key="frame" x="201" y="651" width="15" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="startBtnTouched:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="hYT-m4-dNR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPI-zt-9Gg">
+                                <rect key="frame" x="124" y="665" width="25" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="backward.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="rewindBtnTouched:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="jJH-ld-Dri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2P-5H-KXm">
+                                <rect key="frame" x="269" y="665" width="25" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="forward.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="forwardBtnTouched:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="Mh0-Pk-de5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djk-Tp-eYt">
+                                <rect key="frame" x="346" y="665" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="changeMusic:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="6LN-th-7HJ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="GdA-S7-uXH">
+                                <rect key="frame" x="178" y="614" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-WS-MUd">
+                                <rect key="frame" x="88" y="695" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHL-Yc-dNS">
+                                <rect key="frame" x="200" y="662" width="15" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="pause.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="startBtnTouched:" destination="GEh-zQ-DEY" eventType="touchUpInside" id="8Ds-2I-xZ6"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK7-0Y-rcH">
+                                <rect key="frame" x="35" y="103" width="180" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sZT-wQ-F26" firstAttribute="leading" secondItem="8vw-Zi-aaB" secondAttribute="leading" id="3Hc-Kz-ihr"/>
+                            <constraint firstItem="sZT-wQ-F26" firstAttribute="trailing" secondItem="8vw-Zi-aaB" secondAttribute="trailing" id="WHH-qf-xKc"/>
+                            <constraint firstItem="sZT-wQ-F26" firstAttribute="top" secondItem="r8v-G7-bfW" secondAttribute="top" id="hcu-p1-V0I"/>
+                            <constraint firstItem="sZT-wQ-F26" firstAttribute="bottom" secondItem="8vw-Zi-aaB" secondAttribute="bottom" id="kep-9l-LYp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8vw-Zi-aaB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="播放器" id="rdN-YC-DZP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6ol-lM-w5i" userLabel="Back">
+                            <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="GEh-zQ-DEY" id="tXT-gD-mhD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityText" destination="iF5-WS-MUd" id="VHc-EB-L8h"/>
+                        <outlet property="activityView" destination="GdA-S7-uXH" id="8Yb-Hv-sPd"/>
+                        <outlet property="firstDownloadBtn" destination="8xM-AA-Iaj" id="9ZB-8h-U6d"/>
+                        <outlet property="forwardBtn" destination="O2P-5H-KXm" id="XKG-vC-Ucs"/>
+                        <outlet property="image" destination="sZT-wQ-F26" id="xCo-uI-z1U"/>
+                        <outlet property="pauseBtn" destination="uHL-Yc-dNS" id="Sbk-cc-g9h"/>
+                        <outlet property="randomChooseBtn" destination="Djk-Tp-eYt" id="6Pu-NZ-Kep"/>
+                        <outlet property="rewindBtn" destination="NPI-zt-9Gg" id="ese-g9-tj1"/>
+                        <outlet property="songInfo" destination="mit-a7-ZEA" id="4Ek-bt-S89"/>
+                        <outlet property="songLabel" destination="bK7-0Y-rcH" id="pQO-d4-pVa"/>
+                        <outlet property="songName" destination="TUB-dh-7oC" id="WSF-vX-Zqc"/>
+                        <outlet property="songProcess" destination="QJm-g8-THB" id="hFn-fD-gSX"/>
+                        <outlet property="startBtn" destination="5fS-No-cQH" id="jTd-Zc-Iup"/>
+                        <outlet property="toStartBtn" destination="ot6-w7-0gl" id="Zd4-fR-Y8h"/>
+                        <outlet property="videoView" destination="5I3-VC-SzV" id="FKd-ae-VRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibg-y7-5f6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050.7246376811595" y="-555.13392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oCZ-Sc-2D8">
+            <objects>
+                <navigationController id="9Lw-Hc-sBC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PhR-LO-wy4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tt0-0U-mE3" kind="relationship" relationship="rootViewController" id="deW-LG-oc2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7PC-hN-PBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="-555"/>
+        </scene>
+        <!--Picrhythm - 相册-->
+        <scene sceneID="2vU-zc-QSA">
+            <objects>
+                <viewController id="tt0-0U-mE3" customClass="PhotoViewController" customModule="Picrhythm" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ktF-CI-VY2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewLayout key="collectionViewLayout" id="vGj-Ge-SNE" customClass="PinterestLayout" customModule="Picrhythm" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="j9e-lA-e1I" customClass="PhotoCell" customModule="Picrhythm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44F-Hq-0i6">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THT-rg-Eel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xQP-j2-0Xg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20139194542253522" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="containerView" destination="44F-Hq-0i6" id="pgV-0d-EPA"/>
+                                    <outlet property="imageView" destination="THT-rg-Eel" id="eO8-OO-ATy"/>
+                                    <outlet property="tagLabel" destination="xQP-j2-0Xg" id="6iW-aW-bm0"/>
+                                    <segue destination="GEh-zQ-DEY" kind="show" identifier="GoToPlayer" id="amw-Ii-5tF"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tt0-0U-mE3" id="QZh-GA-1BJ"/>
+                            <outlet property="delegate" destination="tt0-0U-mE3" id="7zU-jH-teo"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Picrhythm - 相册" id="920-ie-2XS">
+                        <rightBarButtonItems>
+                            <barButtonItem title="getFromAlbum" image="photo.fill" catalog="system" id="2Fp-ZC-cnV">
+                                <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="getFromAlbum:" destination="tt0-0U-mE3" id="x63-tF-GaV"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="getFromCamera" image="camera.fill" catalog="system" id="wWp-uQ-LDy">
+                                <color key="tintColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="getFromCamera:" destination="tt0-0U-mE3" id="3Wu-ep-E7P"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="QpS-uN-AZn" kind="presentation" id="5E8-Jr-Khq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="diD-dl-Wp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="-555.13392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="arrow.left.to.line.alt" catalog="system" width="64" height="44"/>
+        <image name="backward.fill" catalog="system" width="64" height="38"/>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+        <image name="forward.fill" catalog="system" width="64" height="38"/>
+        <image name="pause.fill" catalog="system" width="58" height="64"/>
+        <image name="photo.fill" catalog="system" width="64" height="46"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+        <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="amw-Ii-5tF"/>
+    </inferredMetricsTieBreakers>
+</document>

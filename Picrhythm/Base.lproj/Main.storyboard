@@ -39,76 +39,49 @@
                 <viewController id="tt0-0U-mE3" customClass="PhotoStreamViewController" customModule="Picrhythm" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="N6q-p9-8cG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewLayout key="collectionViewLayout" id="IlB-Sx-IkP" customClass="PinterestLayout" customModule="Picrhythm" customModuleProvider="target"/>
-                        <view key="backgroundView" contentMode="scaleToFill" id="h8d-IM-MAU">
-                            <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfF-4n-h3J">
-                                    <rect key="frame" x="358" y="39" width="48" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" backgroundImage="photo.fill" catalog="system"/>
-                                    <connections>
-                                        <action selector="getFromAlbum:" destination="tt0-0U-mE3" eventType="touchUpInside" id="GLt-3O-vzD"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6c-MB-wzB">
-                                    <rect key="frame" x="358" y="88.5" width="48" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button" backgroundImage="camera.fill" catalog="system"/>
-                                    <connections>
-                                        <action selector="getFromCamera:" destination="tt0-0U-mE3" eventType="touchUpInside" id="Esv-y0-xrE"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" red="0.99742268041237114" green="0.99484536082474229" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                        </view>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="BUa-Vc-lsx" customClass="PhotoCell" customModule="Picrhythm" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BUa-Vc-lsx" customClass="PhotoCell" customModule="Picrhythm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="otu-6T-B4f">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="otu-6T-B4f">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ft-aT-ko6">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ft-aT-ko6">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKp-qV-Gdj" userLabel="Tag">
-                                            <rect key="frame" x="0.0" y="179.5" width="200" height="20.5"/>
+                                            <rect key="frame" x="79" y="150" width="42" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="top" secondItem="otu-6T-B4f" secondAttribute="top" id="GB5-nH-jSU"/>
-                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" id="Ifr-GA-qba"/>
-                                        <constraint firstAttribute="trailing" secondItem="6Ft-aT-ko6" secondAttribute="trailing" id="YPe-Wv-1KN"/>
-                                        <constraint firstItem="NKp-qV-Gdj" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" id="bJ1-Sa-1LJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="6Ft-aT-ko6" secondAttribute="bottom" id="cwu-3i-igb"/>
-                                        <constraint firstAttribute="trailing" secondItem="NKp-qV-Gdj" secondAttribute="trailing" id="vOk-lC-yRQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="NKp-qV-Gdj" secondAttribute="bottom" id="wGU-Pq-34K"/>
+                                        <constraint firstItem="NKp-qV-Gdj" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" constant="79" id="0Kr-jH-fCZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Ft-aT-ko6" secondAttribute="trailing" id="ADq-Ia-Tjk"/>
+                                        <constraint firstAttribute="bottom" secondItem="NKp-qV-Gdj" secondAttribute="bottom" id="IFB-k8-yOa"/>
+                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="leading" secondItem="otu-6T-B4f" secondAttribute="leading" id="YVS-NX-Ve8"/>
+                                        <constraint firstItem="NKp-qV-Gdj" firstAttribute="top" secondItem="otu-6T-B4f" secondAttribute="top" constant="150" id="etq-mY-Ot0"/>
+                                        <constraint firstAttribute="trailing" secondItem="NKp-qV-Gdj" secondAttribute="trailing" constant="79" id="iGc-hz-va3"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Ft-aT-ko6" secondAttribute="bottom" id="msW-HF-cfx"/>
+                                        <constraint firstItem="6Ft-aT-ko6" firstAttribute="top" secondItem="otu-6T-B4f" secondAttribute="top" id="ubO-nM-4zG"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
-                                    <outlet property="containerView" destination="otu-6T-B4f" id="7cq-LR-eAe"/>
-                                    <outlet property="imageView" destination="6Ft-aT-ko6" id="f8H-sI-HHG"/>
-                                    <outlet property="tagLabel" destination="NKp-qV-Gdj" id="W8r-dA-TJH"/>
+                                    <outlet property="contentView" destination="otu-6T-B4f" id="Epy-mx-8S3"/>
+                                    <outlet property="imageView" destination="6Ft-aT-ko6" id="J5h-MR-Xdj"/>
+                                    <outlet property="tag" destination="NKp-qV-Gdj" id="GdW-lL-XYa"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="tt0-0U-mE3" id="W4g-6k-ouQ"/>
-                            <outlet property="delegate" destination="tt0-0U-mE3" id="ZR0-1C-puB"/>
-                        </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Photos" id="X95-mM-VzM"/>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diD-dl-Wp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,8 +106,4 @@
             <point key="canvasLocation" x="-46" y="-231"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="camera.fill" catalog="system" width="64" height="48"/>
-        <image name="photo.fill" catalog="system" width="64" height="46"/>
-    </resources>
 </document>
